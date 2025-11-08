@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--TODO: try and make this in a JS framework or die -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,39 +12,27 @@
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="stellaris.svg" aria-label="logo">
-        <h1 class="soon">hi there</h1>
-        <p class="landingtext">find me on</p>
+        <img class="logo" src="logo.svg" aria-label="logo">
+        <h1 class="soon">hi there!</h1>
+        <p class="landingtext">feel free to check me by these links!</p>
         <div class="btn-container">
-            <a href="https://bsky.app/profile/orb.gay">
-                <div class="bluesky-link btn btn-active">
+            <a href="https://bsky.app/profile/venussy.gay">
+                <button class="btn btn-active">
                     <i class="fa-brands fa-bluesky"></i>
                     <p>Bluesky</p>
-                </div>
+                </button>
             </a>
             <a href="https://github.com/blahajcoding">
-                <div class="github-link btn btn-active">
+                <button class="btn btn-active">
                     <i class="fa-brands fa-github"></i>
                     <p>GitHub</p>
-                </div>
+                </button>
             </a>
             <a href="https://www.tiktok.com/@gayorb">
-                <div class="tiktok-link btn btn-active">
+                <button class="btn btn-active">
                     <i class="fa-brands fa-tiktok"></i>
                     <p>TikTok</p>
-                </div>
-            </a>
-            <a href="https://https://www.figma.com/@orbdesigns">
-                <div class="figma-link btn btn-active">
-                    <i class="fa-brands fa-figma"></i>
-                    <p>Figma</p>
-                </div>
-            </a>
-            <a href="https://https://t.me/enbyorb">
-                <div class="figma-link btn btn-active">
-                    <i class="fa-brands fa-telegram"></i>
-                    <p>Telegram</p>
-                </div>
+                </button>
             </a>
         </div>
     </div>

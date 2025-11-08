@@ -1,23 +1,42 @@
 @import url('https://fonts.cdnfonts.com/css/redaction');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    background-color: #161416;
-    color: #feebff;
-    font-family: "DM Mono", monospace;
+    background-image: url("bg.svg");
+    color: rgba(229, 216, 255, 0.9);
+    font-family: "Work Sans", sans-serif;
     overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    letter-spacing: -0.25px;
 }
 
 h1 {
-    font-family: "Redaction 35";
-    font-size: 56px;
+    font-size: 64px;
     margin: 0;
+    background-image: linear-gradient(180deg, #D4CDFF 30.77%, #A27CE4 91.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.2rem;
+    font-weight: 500;
+    animation: weight 0.7s 0.75s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
 }
 
 .landingtext {
-    font-size: 19px;
-    color: rgb(254, 235, 255);
+    font-size: 18px;
     margin: 0;
+    animation: fadeIn 0.5s 0.75s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+
 }
 
 .container {
@@ -28,18 +47,18 @@ h1 {
     gap: 16px;
     justify-content: center;
     flex-basis: auto;
-    animation: fadeIn 0.5s 0s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
-    opacity: 0;
+    align-items: center;
 }
 
 .logo {
     width: 48px;
+    transform: scale(2) translate3d(0, 100%, 0);
+    animation: scale 0.5s 0.2s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
 }
 
 .btn {
-    color: rgb(254, 235, 255);
+    color: rgba(229, 216, 255, 0.8);
     border: none;
-    font-family: "DM Mono", monospace;
     font-size: 16px;
     padding: 12px 0;
     background-color: transparent;
@@ -61,6 +80,14 @@ h1 {
 .btn-container {
     display: flex;
     gap: 24px;
+    width: 82vw;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 0px;
+    justify-content: center;
+    animation: peekaboo 0.5s 1s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
 }
 
 a {
@@ -75,8 +102,7 @@ p {
     from {
       opacity: 0;
       filter: blur(24px);
-      transform: translate3d(0, 12%, 0);
-      
+      transform: translate3d(0, 100%, 0);
     }
     to {
         opacity: 1;
@@ -85,16 +111,89 @@ p {
     }
 }
 
+@keyframes weight {
+    from {
+        opacity: 0;
+        font-weight: 200;
+        filter: blur(24px);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translate3d(0, 0, 0);
+    }
+}
 
-@media (max-width: 426px) {
+@keyframes scale {
+    from {
+        transform: scale(2) translate3d(0, 100%, 0);
+      
+    }
+    to {
+        transform: scale(1) translate3d(0, 0, 0);
+    }
+}
+
+
+@media (max-width: 500px) {
 .container { 
-align-items: center;
-padding: 32px;
-
+  align-items: center;
+  padding: 32px;
 }
-.h1 {
-    text-align: center;
-    font-size: 36px;
-
+h1 {
+  text-align: center;
+  font-size: 48px;
 }
+.btn-container {
+    justify-content: center;
+}
+}
+
+.preview-image {
+  width: 320px;
+  border-radius: 8px;
+}
+
+.preview-card {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  width: fit-content;
+  padding: 12px;
+  border-radius: 16px;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.preview-title, .preview-description {
+  margin: 0;
+  font-family: "DM Sans";
+}
+
+.preview-description {
+  color: rgba(255, 255, 255, 0.64);
+  width: 320px;
+  font-size: 16px;
+}
+
+div.bluesky-link:hover + div.bluesky-card {
+  flex-direction: row;
+}
+
+.visible {
+    display: flex;
+}
+
+@keyframes peekaboo {
+    from {
+        opacity: 0;
+        filter: blur(24px);
+      
+    }
+    to {
+        opacity: 1;
+    }
 }
