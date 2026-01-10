@@ -1,6 +1,3 @@
-@import url('https://fonts.cdnfonts.com/css/redaction');
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
@@ -10,7 +7,7 @@ body {
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     letter-spacing: -0.25px;
 }
@@ -24,7 +21,7 @@ h1 {
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.2rem;
     font-weight: 500;
-    animation: weight 0.7s 0.75s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    animation: weight 0.7s 0.75s cubic-bezier(0.35, 0.11, 0.27, 1.04) forwards;
     opacity: 0;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
@@ -33,7 +30,7 @@ h1 {
 .landingtext {
     font-size: 18px;
     margin: 0;
-    animation: fadeIn 0.5s 0.75s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    animation: fadeIn 0.5s 0.8s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
     opacity: 0;
     transform: translate3d(0, 100%, 0);
 
@@ -43,7 +40,7 @@ h1 {
     padding: 48px;
     display: flex;
     flex-direction: column;
-    height: 82vh;
+    height: 92vh;
     gap: 16px;
     justify-content: center;
     flex-basis: auto;
@@ -53,7 +50,7 @@ h1 {
 .logo {
     width: 48px;
     transform: scale(2) translate3d(0, 100%, 0);
-    animation: scale 0.5s 0.2s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    animation: scale 0.75s 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
 .btn {
@@ -86,7 +83,7 @@ h1 {
     align-items: center;
     row-gap: 0px;
     justify-content: center;
-    animation: peekaboo 0.5s 1s cubic-bezier(0.02, 0.01, 0.21, 1) forwards;
+    animation: peekaboo 0.75s 1.1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
 }
@@ -198,3 +195,4 @@ div.bluesky-link:hover + div.bluesky-card {
         opacity: 1;
     }
 }
+
