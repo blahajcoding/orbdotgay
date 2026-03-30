@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--TODO: try and make this in a JS framework or die -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +10,20 @@
     <link href="fontawesome.css" rel="stylesheet">
     <link href="brands.css" rel="stylesheet">
     <link href="solid.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="preload" href="bg.svg">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
 </head>
+
 <body>
     <div class="container">
-        <img class="logo" src="stellaris.svg" aria-label="logo">
-        <h1 class="soon">hi there</h1>
-        <p class="landingtext">find me on</p>
-        <div class="btn-container">
-            <a href="https://bsky.app/profile/orb.gay">
-                <div class="bluesky-link btn btn-active">
-                    <i class="fa-brands fa-bluesky"></i>
-                    <p>Bluesky</p>
-                </div>
-            </a>
-            <a href="https://github.com/blahajcoding">
-                <div class="github-link btn btn-active">
-                    <i class="fa-brands fa-github"></i>
-                    <p>GitHub</p>
-                </div>
-            </a>
-            <a href="https://www.tiktok.com/@gayorb">
-                <div class="tiktok-link btn btn-active">
-                    <i class="fa-brands fa-tiktok"></i>
-                    <p>TikTok</p>
-                </div>
-            </a>
-            <a href="https://www.figma.com/@orbdesigns">
-                <div class="figma-link btn btn-active">
-                    <i class="fa-brands fa-figma"></i>
-                    <p>Figma</p>
-                </div>
-            </a>
-            <a href="https://t.me/enbyorb">
-                <div class="tg-link btn btn-active">
-                    <i class="fa-brands fa-telegram"></i>
-                    <p>Telegram</p>
-                </div>
-            </a>
+        <div class="contents slide-content" hx-get="/contents/home.html" hx-swap="innerHTML" hx-trigger="load">
+
         </div>
     </div>
 </body>
-</html>
 
+</html>
