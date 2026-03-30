@@ -399,9 +399,9 @@ a {
 }
 
 
-@media screen (max-height: 820px) {
+@media screen and (max-height: 820px) {
     .container {
-        height: 95vh;
+        height: 90vh;
     }
 }
 
