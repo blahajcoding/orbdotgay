@@ -2,7 +2,7 @@
 
 body {
     color: #ECD1FF;
-    font-family: "Not Inter Variable", sans-serif;
+    font-family: "Not Inter Variable";
     overflow: hidden;
     transition: all 0.32s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
     background-repeat: no-repeat;
@@ -396,6 +396,13 @@ a {
 
 .contents {
     max-height: 80vh;
+}
+
+
+@media screen (max-height: 760px) {
+    .container {
+        height: 95vh;
+    }
 }
 
 .profile-link {
