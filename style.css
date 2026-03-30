@@ -27,14 +27,17 @@ h1 {
 }
 
 .container {
-    padding: 48px;
+    /* padding: 48px; */
     display: flex;
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
     gap: 16px;
     justify-content: center;
     flex-basis: auto;
     align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -298,7 +301,7 @@ div.bluesky-link:hover+div.bluesky-card {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     overflow: scroll;
-    border-radius: 16px;
+    border-radius: 24px;
 }
 
 .project-grid::-webkit-scrollbar {
@@ -392,7 +395,7 @@ a {
 }
 
 .contents {
-    max-height: 86vh;
+    max-height: 80vh;
 }
 
 .profile-link {
