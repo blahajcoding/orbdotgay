@@ -30,7 +30,7 @@ h1 {
     /* padding: 48px; */
     display: flex;
     flex-direction: column;
-    height: 95vh;
+    height: 100vh;
     gap: 16px;
     justify-content: center;
     flex-basis: auto;
