@@ -419,3 +419,7 @@ a {
     color: #1D1722;
     border-radius: 8px;
 }
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
