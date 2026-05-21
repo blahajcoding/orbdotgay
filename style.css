@@ -38,6 +38,7 @@ h1 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    view-transition-name: mrow;
 }
 
 .logo {
@@ -220,7 +221,6 @@ div.bluesky-link:hover+div.bluesky-card {
 
 .contents {
     transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) allow-discrete;
-    view-transition-name: contents;
 }
 
 @keyframes slide-to-left {
@@ -231,7 +231,7 @@ div.bluesky-link:hover+div.bluesky-card {
     }
 
     to {
-        transform: translateX(-16%);
+        transform: translateX(-12%);
         opacity: 0;
         filter: blur(0px);
     }
@@ -239,7 +239,7 @@ div.bluesky-link:hover+div.bluesky-card {
 
 @keyframes slide-from-right {
     from {
-        transform: translateX(16%);
+        transform: translateX(12%);
         opacity: 0;
         filter: blur(12px);
     }
@@ -251,16 +251,13 @@ div.bluesky-link:hover+div.bluesky-card {
     }
 }
 
-::view-transition-old(contents) {
+
+::view-transition-old(mrow) {
     animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both slide-to-left;
 }
 
-::view-transition-new(contents) {
+::view-transition-new(mrow) {
     animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both slide-from-right;
-}
-
-.contents {
-    animation: fade-in 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .secondary-link {
@@ -399,9 +396,21 @@ a {
 }
 
 
-@media screen and (max-height: 820px) {
+@media screen and (max-height: 700px) {
     .container {
-        height: 90vh;
+        height: initial;
+        padding: 48px;
+        box-sizing: initial;
+        justify-content: inherit;
+    }
+
+    .contents {
+        max-height: initial;
+    }
+
+    body {
+        overflow: scroll;
+        scrollbar-width: thin;
     }
 }
 
