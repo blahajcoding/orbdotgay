@@ -89,14 +89,14 @@ h1 {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover, a:focus .btn {
     background-color: rgba(219, 199, 255, 0.08);
     color: rgb(242, 235, 255);
     padding: 16px;
     border-radius: 12px;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover, a:focus .btn-secondary {
     color: rgb(242, 235, 255);
 }
 
@@ -223,6 +223,10 @@ div.bluesky-link:hover+div.bluesky-card {
     transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) allow-discrete;
 }
 
+html:active-view-transition .contents {
+    transition: none !important;
+}
+
 @keyframes slide-to-left {
     from {
         transform: translateX(0);
@@ -251,13 +255,106 @@ div.bluesky-link:hover+div.bluesky-card {
     }
 }
 
+@keyframes slide-to-right {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(12px);
+    }
+
+    to {
+        transform: translateX(12%);
+        opacity: 0;
+        filter: blur(0px);
+    }
+}
+
+@keyframes slide-from-left {
+    from {
+        transform: translateX(-12%);
+        opacity: 0;
+        filter: blur(12px);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+:root:has(.back) {
+    --page-exit-anim: slide-to-left;
+    --page-enter-anim: slide-from-right;
+}
+
+:root:not(:has(.back)) {
+    --page-exit-anim: slide-to-right;
+    --page-enter-anim: slide-from-left;
+}
+
+@keyframes slide-to-left {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(12px);
+    }
+
+    to {
+        transform: translateX(-12%);
+        opacity: 0;
+        filter: blur(0px);
+    }
+}
+
+@keyframes slide-from-right {
+    from {
+        transform: translateX(12%);
+        opacity: 0;
+        filter: blur(12px);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+@keyframes slide-to-right {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(12px);
+    }
+
+    to {
+        transform: translateX(12%);
+        opacity: 0;
+        filter: blur(0px);
+    }
+}
+
+@keyframes slide-from-left {
+    from {
+        transform: translateX(-12%);
+        opacity: 0;
+        filter: blur(12px);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
 
 ::view-transition-old(mrow) {
-    animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both slide-to-left;
+    animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both var(--page-exit-anim);
 }
 
 ::view-transition-new(mrow) {
-    animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both slide-from-right;
+    animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both var(--page-enter-anim);
 }
 
 .secondary-link {
@@ -266,7 +363,7 @@ div.bluesky-link:hover+div.bluesky-card {
     cursor: pointer;
 }
 
-.secondary-link:hover {
+.secondary-link:hover, .secondary-link:focus {
     color: rgba(236, 209, 255, 0.8);
     border-bottom: 2px solid rgba(236, 209, 255, 0.45);
 }
@@ -363,7 +460,7 @@ a {
     cursor: pointer;
 }
 
-.btn-fullwidth:hover {
+.btn-fullwidth:hover, .btn-fullwidth:focus {
     background-color: #ECD1FF;
     color: #1D1722;
 }
@@ -422,7 +519,7 @@ a {
     transition: all 0.32s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
 }
 
-.profile-link:hover {
+.profile-link:hover, .profile-link:focus {
     background-color: #ECD1FF;
     padding: 8px;
     color: #1D1722;
@@ -434,3 +531,7 @@ a {
 }
 
 .back{all:unset !important;padding: unset !important;background-color:transparent !important;}
+
+break {
+    text-indent: -10000px;
+}
