@@ -432,3 +432,5 @@ a {
 * {
     -webkit-tap-highlight-color: transparent;
 }
+
+.back{all:unset !important;padding: unset !important;background-color:transparent !important;}
