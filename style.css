@@ -635,3 +635,14 @@ break {
     font-size: 14px;
     color: rgba(236, 209, 255, 0.45);
 }
+
+.nb-flag {
+    width: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: width 0.2s ease;
+}
+
+:has(> .pronouns:hover) > .nb-flag {
+    width: 20px;
+}
