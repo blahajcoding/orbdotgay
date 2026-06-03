@@ -89,14 +89,16 @@ h1 {
     cursor: pointer;
 }
 
-.btn:hover, a:focus .btn {
+.btn:hover,
+a:focus .btn {
     background-color: rgba(219, 199, 255, 0.08);
     color: rgb(242, 235, 255);
     padding: 16px;
     border-radius: 12px;
 }
 
-.btn-secondary:hover, a:focus .btn-secondary {
+.btn-secondary:hover,
+a:focus .btn-secondary {
     color: rgb(242, 235, 255);
 }
 
@@ -214,7 +216,8 @@ div.bluesky-link:hover+div.bluesky-card {
 }
 
 
-.secondary {
+.secondary,
+a.secondary {
     font-weight: 400;
     color: rgba(236, 209, 255, 0.6);
 }
@@ -363,7 +366,8 @@ html:active-view-transition .contents {
     cursor: pointer;
 }
 
-.secondary-link:hover, .secondary-link:focus {
+.secondary-link:hover,
+.secondary-link:focus {
     color: rgba(236, 209, 255, 0.8);
     border-bottom: 2px solid rgba(236, 209, 255, 0.45);
 }
@@ -460,7 +464,8 @@ a {
     cursor: pointer;
 }
 
-.btn-fullwidth:hover, .btn-fullwidth:focus {
+.btn-fullwidth:hover,
+.btn-fullwidth:focus {
     background-color: #ECD1FF;
     color: #1D1722;
 }
@@ -519,7 +524,8 @@ a {
     transition: all 0.32s cubic-bezier(0.02, 0.01, 0.21, 1) allow-discrete;
 }
 
-.profile-link:hover, .profile-link:focus {
+.profile-link:hover,
+.profile-link:focus {
     background-color: #ECD1FF;
     padding: 8px;
     color: #1D1722;
@@ -530,8 +536,102 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-.back{all:unset !important;padding: unset !important;background-color:transparent !important;}
+.back {
+    all: unset !important;
+    padding: unset !important;
+    background-color: transparent !important;
+}
 
 break {
     text-indent: -10000px;
+}
+
+
+/* i'm stealing the following from transitions.dev */
+
+:root {
+    --tt-in-dur: 150ms;
+    --tt-out-dur: 50ms;
+    --tt-scale: 0.98;
+    --tt-delay: 80ms;
+    --tt-in-ease: ease-out;
+    --tt-out-ease: ease-out;
+    --tt-fg: #f0f0f0;
+}
+
+.t-tt-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.t-tt {
+    /* 1. Keep all the original absolute positioning rules */
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translate(-50%, 0) scale(var(--tt-scale));
+    transform-origin: 50% 100%;
+
+    /* 2. Turn the tooltip itself into a flexbox */
+    display: inline-flex;
+    /* Vertically centers items (like an icon + text) */
+    gap: 6px;
+    /* Puts a neat gap between items inside the tooltip */
+
+    /* 3. Keep the rest of the original styling */
+    padding: 16px;
+    border-radius: 20px;
+    background: #251E2B;
+    border: 1px solid rgba(236, 209, 255, 0.08);
+    
+    color: var(--tt-fg);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.06),
+        0 2px 6px 0 rgba(0, 0, 0, 0.05),
+        0 4px 42px 0 rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity var(--tt-out-dur) var(--tt-out-ease),
+        transform var(--tt-out-dur) var(--tt-out-ease);
+    flex-direction: column;
+}
+
+/* The 50ms delay belongs ONLY to the hover rule so leaving
+   the trigger snaps the delay back to 0 and the disappear
+   plays immediately. */
+.t-tt-wrap:hover .t-tt,
+.t-tt-trigger:focus-visible+.t-tt {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+    transition-duration: var(--tt-in-dur);
+    transition-timing-function: var(--tt-in-ease);
+    transition-delay: var(--tt-delay);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .t-tt {
+        transition: none !important;
+    }
+}
+
+.tt-text {
+    width: 320px;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: rgba(236, 209, 255, 0.64);
+}
+
+.tt-header {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #ECD1FF;
+    letter-spacing: -0.025em;
+}
+
+.tt-details, .tt-details > .ti {
+    font-size: 14px;
+    color: rgba(236, 209, 255, 0.45);
 }
