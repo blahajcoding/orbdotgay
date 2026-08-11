@@ -1,25 +1,30 @@
-<a class="back" onclick="history.back()" href="">
-    <div class="btn-secondary" href="">
-        <i class="ti ti-arrow-left"></i>
-        <p>Go back home</p>
-    </div>
-</a>
-<h1 class="soon">About me</h1>
+<hstack style="gap:12px">
+    <a class="back" onclick="history.back()" href="">
+        <div class="btn-secondary" href="">
+            <i class="ti ti-arrow-left"></i>
+        </div>
+    </a>
+    <h1 class="soon">About me</h1>
+</hstack>
 <p class="landingtext">I’m Juniper, a student living in the UK. I’m studying computer science. However, I
     love being an amateur UI designer, because I find drawing rectangles with a mouse rather therapeutic.</p>
 <img class="squiggle" src="squiggle.svg" aria-hidden="true">
-<div class="info-container">
-    <div class="info">
-        <i class="ti ti-timezone" aria-hidden="true"></i>
-        <p aria-disabled="true">Time zone:</p>
-        <p class="secondary" aria-disabled="true">UTC+01:00</p>
+<div class="info-grid">
+    <div class="project-card">
+        <hstack style="gap:12px">
+            <i class="ti ti-timezone" aria-hidden="true"></i>
+            <p aria-disabled="true">Time zone</p>
+        </hstack>
+        <h1>UTC+01:00</h1>
     </div>
-    <div class="info">
-        <i class="ti ti-user" aria-hidden="true"></i>
-        <p>Pronouns:</p>
+    <div class="project-card">
+        <hstack style="gap:12px">
+            <i class="ti ti-user-question" aria-hidden="true"></i>
+            <p aria-disabled="true">Pronouns</p>
+        </hstack>
         <span class="t-tt-wrap">
-            <img class="nb-flag" src="fun/nb.svg">
-            <a class="secondary secondary-link t-tt-trigger pronouns" target="_blank" href="https://en.wikipedia.org/wiki/Singular_they">they/them</a>
+            <hstack><img class="pride-flag" src="fun/nb.svg">
+            <a class="secondary-link t-tt-trigger pronouns" target="_blank" href="https://en.wikipedia.org/wiki/Singular_they"><h1>they/them</h1></a></hstack>
             <span class="t-tt" id="tt-1" role="tooltip" aria-hidden="true">
                 <h2 class="tt-header">Singular they</h2>
                 <p class="tt-text">Singular they is a gender-neutral third-person pronoun in English. It typically occurs with an indeterminate antecedent, to refer to an unknown person, or to refer to every person of some group, in sentences such as: "Somebody left their umbrella in the office. Could you please let them know where they can get it?"</p>
@@ -30,16 +35,20 @@
             </span>
         </span>
     </div>
-    <div class="info">
-        <i class="ti ti-cake" aria-hidden="true"></i>
-        <p>Birthday:</p>
-        <p class="secondary">4th December</p>
+    <div class="project-card">
+        <hstack style="gap:12px">
+            <i class="ti ti-cake" aria-hidden="true"></i>
+            <p aria-disabled="true">Birthday</p>
+        </hstack>
+        <h1>4th December</h1>
     </div>
-    <div class="info">
-        <i class="ti ti-disc" aria-hidden="true"></i>
-        <p>Favourite album:</p>
+    <div class="project-card">
+        <hstack style="gap:12px">
+            <i class="ti ti-disc" aria-hidden="true"></i>
+            <p aria-disabled="true">Favourite album</p>
+        </hstack>
         <span class="t-tt-wrap">
-            <a class="secondary secondary-link t-tt-trigger" target="_blank" href="https://en.wikipedia.org/wiki/I_Love_My_Computer">I Love My Computer by Ninajirachi</a>
+            <a class="secondary-link t-tt-trigger" target="_blank" href="https://en.wikipedia.org/wiki/I_Love_My_Computer"><h1>I Love My Computer by Ninajirachi</h1></a>
             <span class="t-tt" id="tt-1" role="tooltip" aria-hidden="true">
                 <h2 class="tt-header">I Love My Computer</h2>
                 <p class="tt-text">I Love My Computer is the debut studio album by Australian electronic musician, DJ, and producer Ninajirachi, released on 8 August 2025 by NLV Records.</p>
@@ -50,14 +59,30 @@
             </span>
         </span>
     </div>
-    <div class="info">
-        <i class="ti ti-device-laptop" aria-hidden="true"></i>
-        <p>Main laptop:</p>
-        <p class="secondary">ThinkPad T14 Gen 3 (AMD)</p>
+    <div class="project-card">
+        <hstack style="gap:12px">
+            <i class="ti ti-device-laptop" aria-hidden="true"></i>
+            <p aria-disabled="true">Main laptop</p>
+        </hstack>
+        <span class="t-tt-wrap">
+            <a class="secondary-link t-tt-trigger" target="_blank" href="https://en.wikipedia.org/wiki/I_Love_My_Computer"><h1>ThinkPad T14 Gen 3 (AMD)</h1></a>
+            <span class="t-tt" id="tt-1" role="tooltip" aria-hidden="true">
+                <h2 class="tt-header">ThinkPad T14 Gen 3 (AMD)</h2>
+                <p class="tt-text"><b>Specs</b>
+                - AMD Ryzen 7 Pro 6850U
+                - 16GB RAM
+                - 512GB SSD
+                <b>Operating system</b>
+                - Arch Linux
+                - Niri with Noctalia Shell (v4)</p>
+            </span>
+        </span>
     </div>
-    <div class="info">
-        <i class="ti ti-tools-kitchen" aria-hidden="true"></i>
-        <p>Favourite utensil:</p>
-        <p class="secondary">Fork</p>
+    <div class="project-card">
+        <hstack style="gap:12px">
+            <i class="ti ti-tools-kitchen" aria-hidden="true"></i>
+            <p aria-disabled="true">Favourite utensil</p>
+        </hstack>
+        <h1>Fork</h1>
     </div>
 </div>
