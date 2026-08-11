@@ -31,6 +31,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    height: 100dvh;
     gap: 16px;
     flex-basis: auto;
     align-items: center;
@@ -42,6 +43,15 @@ h1 {
     overflow: auto;
     overflow-x: hidden;
     padding-bottom: 64px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 32px 0 8px;
+    color: rgba(236, 209, 255, 0.5);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
@@ -199,6 +209,11 @@ div.bluesky-link:hover+div.bluesky-card {
     gap: 20px;
     transition: all 0.32s ease-in-out;
     max-width: 560px;
+    flex: 1;
+}
+
+gap {
+    flex: 1;
 }
 
 .ti {
@@ -365,14 +380,17 @@ html:active-view-transition .contents {
 
 .secondary-link {
     all: unset;
-    border-bottom: 2px solid rgba(236, 209, 255, 0.24);
+    text-decoration: underline;
+    text-decoration-color: rgba(236, 209, 255, 0.24);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
     cursor: pointer;
 }
 
 .secondary-link:hover,
 .secondary-link:focus {
     color: rgba(236, 209, 255, 0.8);
-    border-bottom: 2px solid rgba(236, 209, 255, 0.45);
+    text-decoration-color: rgba(236, 209, 255, 0.45);
 }
 
 .project-logo {
@@ -640,6 +658,11 @@ break {
     line-height: 1.5em;
     font-weight: 400;
     color: rgba(236, 209, 255, 0.64);
+    white-space: pre-line;
+}
+
+b {
+    color: #ECD1FF;
 }
 
 .tt-header {
@@ -655,13 +678,13 @@ break {
     color: rgba(236, 209, 255, 0.45);
 }
 
-.nb-flag {
+.pride-flag {
     width: 0px;
     display: inline-block;
     transition: width 0.2s ease;
 }
 
-:has(> .pronouns:hover) > .nb-flag {
+:has(> .pronouns:hover) > .pride-flag, .pride-flag:hover {
     width: 32px;
     padding-right: 16px;
 }
