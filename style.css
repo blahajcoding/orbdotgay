@@ -617,7 +617,7 @@ break {
     /* 3. Keep the rest of the original styling */
     padding: 16px;
     border-radius: 20px;
-    background: #251E2B;
+    background: rgba(37, 30, 43, 0.5);
     border: 1px solid rgba(236, 209, 255, 0.08);
     
     color: var(--tt-fg);
@@ -631,6 +631,7 @@ break {
         opacity var(--tt-out-dur) var(--tt-out-ease),
         transform var(--tt-out-dur) var(--tt-out-ease);
     flex-direction: column;
+    z-index: 100;
 }
 
 /* The 50ms delay belongs ONLY to the hover rule so leaving
