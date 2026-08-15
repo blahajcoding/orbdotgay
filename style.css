@@ -617,7 +617,7 @@ break {
     /* 3. Keep the rest of the original styling */
     padding: 16px;
     border-radius: 20px;
-    background: rgba(37, 30, 43, 0.5);
+    background: #251e2b;
     border: 1px solid rgba(236, 209, 255, 0.08);
     
     color: var(--tt-fg);
