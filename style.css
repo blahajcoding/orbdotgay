@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #1D1722;
+    background-color: #180a1f;
 }
 
 h1 {
@@ -498,7 +498,7 @@ a {
 .btn-fullwidth:hover,
 .btn-fullwidth:focus {
     background-color: #ECD1FF;
-    color: #1D1722;
+    color: #180a1f;
 }
 
 .pcard-top {
@@ -564,7 +564,7 @@ a {
 .profile-link:focus {
     background-color: #ECD1FF;
     padding: 8px;
-    color: #1D1722;
+    color: #180a1f;
     border-radius: 8px;
 }
 
@@ -617,7 +617,7 @@ break {
     /* 3. Keep the rest of the original styling */
     padding: 16px;
     border-radius: 20px;
-    background: #251e2b;
+    background: #211127;
     border: 1px solid rgba(236, 209, 255, 0.08);
     
     color: var(--tt-fg);
